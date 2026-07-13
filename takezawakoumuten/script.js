@@ -1,52 +1,55 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const demoForm = document.querySelector("[data-demo-form]");
+const formResult = document.querySelector("[data-form-result]");
 
-const syncHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+const updateHeader = () => {
+  header?.classList.toggle("is-scrolled", window.scrollY > 24);
 };
 
-syncHeader();
-window.addEventListener("scroll", syncHeader, { passive: true });
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-  navToggle.setAttribute("aria-expanded", String(!isOpen));
-  nav.classList.toggle("is-open", !isOpen);
-  header.classList.toggle("is-open", !isOpen);
+navToggle?.addEventListener("click", () => {
+  const isOpen = nav?.classList.toggle("is-open") ?? false;
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  header?.classList.toggle("is-open", isOpen);
 });
 
-nav.querySelectorAll("a").forEach((link) => {
+nav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navToggle.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
-    header.classList.remove("is-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    header?.classList.remove("is-open");
   });
 });
 
-document.querySelectorAll(".section, .notice-band").forEach((section) => {
-  section.classList.add("fade-in");
-});
+const revealTargets = document.querySelectorAll(".section, .work-gallery figure");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.16 }
-);
+if ("IntersectionObserver" in window) {
+  revealTargets.forEach((target) => target.classList.add("reveal"));
 
-document.querySelectorAll(".fade-in").forEach((section) => observer.observe(section));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 }
+  );
 
-document.querySelector(".contact-form").addEventListener("submit", (event) => {
+  revealTargets.forEach((target) => observer.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
+
+demoForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const button = event.currentTarget.querySelector("button");
-  button.textContent = "送信されません";
-  window.setTimeout(() => {
-    button.textContent = "送信デモ";
-  }, 1800);
+  if (formResult) {
+    formResult.textContent = "送信デモを確認しました。実際には送信されません。";
+  }
 });
