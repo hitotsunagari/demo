@@ -1616,6 +1616,20 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 @media(prefers-reduced-motion:reduce){
  .ai-site.ai-v26-motion-ready .ai-v26-entrance {opacity:1!important;translate:none!important;transition:none!important;transition-delay:0ms!important}
 }
+
+/* Keep intended Japanese phrases together; let entire phrases reflow rather than splitting particles */
+.ai-site .ai-v26-chunk{display:inline-block;white-space:nowrap;max-width:100%;vertical-align:baseline}
+@media(max-width:720px){
+  .ai-site .display-heading {font-size:clamp(32px,8.4vw,40px)!important}
+  .ai-site #sim-v5-title {font-size:clamp(29px,8.2vw,34px)!important}
+  .ai-site #process-title {font-size:clamp(27px,7.8vw,32px)!important}
+}
+@media(max-width:420px){
+  .ai-site .hero-title {font-size:clamp(38px,11vw,44px)!important}
+}
+@media(min-width:721px) and (max-width:950px){
+  .ai-site .section-title-row .display-heading {font-size:clamp(32px,4.3vw,41px)!important}
+}
 </style>
 </head>
 <body class="hito-ai-page">
@@ -1640,7 +1654,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 <main id="main"><section aria-labelledby="hero-title" class="hero section-dark">
 <div class="container hero-layout">
 <div class="hero-copy">
-<h1 class="hero-title reveal" id="hero-title">AIを、<br/><span class="hero-emphasis">会社の実行力</span>へ</h1><p class="hero-product-line reveal">法人向けAI研修<span class="hero-product-sep">・</span><br class="mobile-break"/>導入支援・業務改善</p>
+<h1 class="hero-title reveal" id="hero-title">AIを、<br/><span class="ai-v26-chunk"><span class="hero-emphasis">会社の実行力</span>へ</span></h1><p class="hero-product-line reveal">法人向けAI研修<span class="hero-product-sep">・</span><br class="mobile-break"/>導入支援・業務改善</p>
 <div class="hero-actions reveal">
 <a class="button button-light" href="#contact">自社のAI活用を相談する <span aria-hidden="true" class="button-arrow">↗</span></a>
 <a class="text-link" href="#ai-check">まずはAI活用レベルを診断　↓</a>
@@ -1690,7 +1704,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 </div>
 </section><section aria-labelledby="sim-v5-title" class="section simulator-v5" id="simulation">
 <div class="container">
-<div class="simulation-v5-intro reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">03</span><span class="section-index-name">経営インパクトを試算</span></span><h2 class="display-heading dark" id="sim-v5-title">たった20分<wbr/><span class="impact-copy-emphasis">積み重なれば、経営資源になる</span></h2><p>削減できる時間、先送りで逃す機会、そして新しく生み出せる仕事。<wbr/>3つの切り口から、自社の可能性を数字で確かめてください。</p></div>
+<div class="simulation-v5-intro reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">03</span><span class="section-index-name">経営インパクトを試算</span></span><h2 class="display-heading dark" id="sim-v5-title"><span class="ai-v26-chunk">たった20分</span><wbr/><span class="impact-copy-emphasis"><span class="ai-v26-chunk">積み重なれば、</span><span class="ai-v26-chunk">経営資源になる</span></span></h2><p>削減できる時間、先送りで逃す機会、そして新しく生み出せる仕事。<wbr/>3つの切り口から、自社の可能性を数字で確かめてください。</p></div>
 <div class="sim-v5-shell reveal">
 <div aria-label="シミュレーションの種類" class="sim-v5-tabs" role="tablist">
 <button aria-controls="sim-panel-time" aria-selected="true" class="sim-v5-tab is-active" data-simtab="time" id="sim-tab-time" role="tab" tabindex="0" type="button"><span>01</span>削減できる時間</button>
@@ -1740,7 +1754,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 <p class="sim-v5-more"><a href="https://hito-tsunagari.jp/ai/easy/">業務を選んで、もっと詳しく試算する →</a></p>
 <p class="sim-v5-note">※本シミュレーションは説明用の仮定に基づく概算です。AI導入前の準備、研修や運用の費用・時間、実現可能性は考慮していません。</p>
 </div></section><section aria-labelledby="applications-title" class="section applications section-dark" id="applications">
-<div class="container"><div class="section-heading reveal"><span class="section-index light"><span aria-hidden="true" class="section-index-number">04</span><span class="section-index-name">業務での活用例</span></span></div><div class="section-title-row"><h2 class="display-heading light reveal" id="applications-title">業務の変化を、<wbr/><span class="accent-gold">数字で見る</span></h2><p class="title-support reveal">日常業務のビフォー・アフターを具体的に比較<wbr/>時間はすべて試算用の仮定です</p></div>
+<div class="container"><div class="section-heading reveal"><span class="section-index light"><span aria-hidden="true" class="section-index-number">04</span><span class="section-index-name">業務での活用例</span></span></div><div class="section-title-row"><h2 class="display-heading light reveal" id="applications-title"><span class="ai-v26-chunk">業務の変化を、</span><wbr/><span class="accent-gold ai-v26-chunk">数字で見る</span></h2><p class="title-support reveal">日常業務のビフォー・アフターを具体的に比較<wbr/>時間はすべて試算用の仮定です</p></div>
 <div class="applications-frame reveal"><div aria-label="業務別の試算例" class="app-tabs" role="tablist"><button aria-controls="panel-sales" aria-selected="true" class="app-tab is-active" data-tab="sales" id="tab-sales" role="tab" type="button"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><rect height="18" rx="2" width="22" x="5" y="7"></rect><path d="M10 12h12M10 17h9"></path></svg><span class="app-tab-label">営業・提案</span></button><button aria-controls="panel-backoffice" aria-selected="false" class="app-tab" data-tab="backoffice" id="tab-backoffice" role="tab" tabindex="-1" type="button"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><rect height="24" rx="2" width="18" x="7" y="4"></rect><path d="M11 10h10M11 15h10M11 20h6"></path></svg><span class="app-tab-label">経理・事務</span></button><button aria-controls="panel-marketing" aria-selected="false" class="app-tab" data-tab="marketing" id="tab-marketing" role="tab" tabindex="-1" type="button"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><path d="M4 26h24M7 22V11M14 22V6M21 22V14M7 11h4M14 6h4M21 14h4"></path></svg><span class="app-tab-label">広報・販促</span></button><button aria-controls="panel-planning" aria-selected="false" class="app-tab" data-tab="planning" id="tab-planning" role="tab" tabindex="-1" type="button"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><rect height="22" rx="2" width="22" x="5" y="5"></rect><path d="M10 12h12M10 17h7M10 22h11"></path></svg><span class="app-tab-label">企画・情報整理</span></button><button aria-controls="panel-meeting" aria-selected="false" class="app-tab" data-tab="meeting" id="tab-meeting" role="tab" tabindex="-1" type="button"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><rect height="18" rx="5" width="10" x="11" y="4"></rect><path d="M7 17a9 9 0 0 0 18 0M16 26v3M11 29h10"></path></svg><span class="app-tab-label">会議・議事録</span></button></div><div class="app-panels"><div aria-labelledby="tab-sales" class="app-panel" id="panel-sales" role="tabpanel">
 <div class="app-case-heading"><span class="app-case-icon"><svg aria-hidden="true" class="app-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 32 32"><rect height="18" rx="2" width="22" x="5" y="7"></rect><path d="M10 12h12M10 17h9"></path></svg></span><div><span class="app-case-overline">想定ケース｜営業・提案</span><h3>提案書の作成</h3></div></div>
 <p class="app-case-context">営業担当が毎月20件の提案書を作る場合</p>
@@ -1796,7 +1810,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 </section><section aria-labelledby="services-title" class="section services" id="services">
 <div class="container">
 <div class="section-heading reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">05</span><span class="section-index-name">アスデキAIの特徴</span></span></div>
-<div class="section-title-row"><h2 class="display-heading dark reveal" id="services-title">動画だけで終わらない<wbr/><span class="accent-orange">学びを、職場の力に</span></h2><p class="title-support reveal">基礎から実務まで、自社のペースで学べる環境<wbr/>研修と、個別の導入・構築支援は分けてご案内します</p></div>
+<div class="section-title-row"><h2 class="display-heading dark reveal" id="services-title"><span class="ai-v26-chunk">動画だけで</span><span class="ai-v26-chunk">終わらない</span><wbr/><span class="accent-orange"><span class="ai-v26-chunk">学びを、</span><span class="ai-v26-chunk">職場の力に</span></span></h2><p class="title-support reveal">基礎から実務まで、自社のペースで学べる環境<wbr/>研修と、個別の導入・構築支援は分けてご案内します</p></div>
 <div class="oem-editorial reveal">
 <div class="oem-primary">
 <p class="oem-primary-eyebrow">法人向けAI実務研修</p>
@@ -1846,7 +1860,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 </div></div>
 </section><section aria-labelledby="curriculum-title" class="section curriculum curriculum-premium" id="curriculum"><div class="container">
 <div class="section-heading reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">06</span><span class="section-index-name">実務につながる学習テーマ</span></span></div>
-<div class="curriculum-top reveal"><div><h2 class="display-heading dark" id="curriculum-title">自社の仕事から、<wbr/><span class="accent-orange">学ぶ内容を選べる</span></h2></div><p>AIの基礎から、営業・事務・経営管理などの実務活用へ<wbr/>どの仕事に生かしたいかを起点に、学ぶ内容を考えます</p></div>
+<div class="curriculum-top reveal"><div><h2 class="display-heading dark" id="curriculum-title"><span class="ai-v26-chunk">自社の仕事から、</span><wbr/><span class="accent-orange ai-v26-chunk">学ぶ内容を選べる</span></h2></div><p>AIの基礎から、営業・事務・経営管理などの実務活用へ<wbr/>どの仕事に生かしたいかを起点に、学ぶ内容を考えます</p></div>
 <div class="learning-premium-layout reveal">
 <div class="learning-explorer">
 <p class="learning-label">職種から学習テーマを探す</p>
@@ -1906,7 +1920,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 </div>
 <p class="readiness-bottom-note reveal">自社の今を知り、次に取り組むことを明確に</p>
 </div>
-</section><section aria-labelledby="process-title" class="section process" id="flow"><div class="container"><div class="section-heading reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">08</span><span class="section-index-name">導入までの流れ</span></span></div><div class="section-title-row"><h2 class="display-heading dark reveal" id="process-title">最短翌営業日から、<wbr/><span class="accent-orange">学びをスタート</span></h2><p class="title-support reveal">お手続きとID発行が完了すれば、すぐに受講をスタート。自社のペースで学び始められます</p></div><div class="process-heading-meta reveal"><span class="process-duration-pill">お申し込みからの受講開始目安 <strong>最短翌営業日</strong></span></div><div class="process-grid">
+</section><section aria-labelledby="process-title" class="section process" id="flow"><div class="container"><div class="section-heading reveal"><span class="section-index"><span aria-hidden="true" class="section-index-number">08</span><span class="section-index-name">導入までの流れ</span></span></div><div class="section-title-row"><h2 class="display-heading dark reveal" id="process-title"><span class="ai-v26-chunk">最短翌営業日から、</span><wbr/><span class="accent-orange ai-v26-chunk">学びをスタート</span></h2><p class="title-support reveal">お手続きとID発行が完了すれば、すぐに受講をスタート。自社のペースで学び始められます</p></div><div class="process-heading-meta reveal"><span class="process-duration-pill">お申し込みからの受講開始目安 <strong>最短翌営業日</strong></span></div><div class="process-grid">
 <article class="process-step reveal"><span class="step-no">01</span><div><h3>無料相談・受講内容の確認</h3><p>必要な研修・受講人数・希望日を確認します</p><span class="process-outcome">学ぶ内容がまだ決まっていなくても相談できます</span></div></article>
 <article class="process-step reveal"><span class="step-no">02</span><div><h3>お申し込み</h3><p>研修の内容・料金・契約条件を確認し、お申し込みいただきます</p><span class="process-outcome">お申し込み後、受講準備に進みます</span></div></article>
 <article class="process-step reveal"><span class="step-no">03</span><div><h3>受講IDの発行</h3><p>必要な受講者情報を確認し、ログインのご案内を準備します</p><span class="process-outcome">受講者情報の確認後、ID発行手続きを進めます</span></div></article>
@@ -1916,7 +1930,7 @@ html{scroll-behavior:smooth}body.hito-ai-page{margin:0;background:var(--ai-navy)
 <details><summary>AI研修だけの相談もできますか？ <span aria-hidden="true">＋</span></summary><p>はい、研修だけのご相談も歓迎です。AI研修・人材育成は、アスデキAIの中心となるサービスです。受講する人数や学びたいテーマを伺い、合う受講方法をご提案します。</p></details>
 <details><summary>業務の自動化についても相談できますか？ <span aria-hidden="true">＋</span></summary><p>はい、ご相談いただけます。業務の自動化や導入の支援は、研修とは別のサービスとしてお受けしています。対象の業務や今お使いのシステム、情報の扱いを確かめたうえで、できることと費用をご提案します。</p></details>
 <details><summary>機密情報や個人情報の取り扱いが心配です。 <span aria-hidden="true">＋</span></summary><p>研修では、AIに入力してよい情報の線引きや、情報を守るための設定など、安全な使い方から学びます。社内のルールづくりについても、ご相談いただけます。</p></details>
-<details><summary>料金や契約期間は、相談の段階で確認できますか？ <span aria-hidden="true">＋</span></summary><p>はい。受講する人数やご希望の内容を伺い、お見積もりと契約の条件をご案内します。</p></details><details><summary>動画教材はどのように更新されますか？ <span aria-hidden="true">＋</span></summary><p>教材は、新しいAIツールや機能に合わせて追加・更新されます。受講できる講座は、お申し込みのときにご案内します。</p></details><details><summary>AIチャットで何でも質問できますか？ <span aria-hidden="true">＋</span></summary><p>AIチャットでは、講座の内容についての基本的な質問にお答えします。自社の業務に合わせた詳しいご相談やシステムづくりは、別途ご相談ください。</p></details></div></div></section><section aria-labelledby="contact-title" class="contact section-dark" id="contact"><div class="container contact-layout"><div class="contact-left reveal"><p class="contact-kicker">まずはご相談ください</p><h2 id="contact-title">AIで、<wbr/>その先へ<span></span></h2><p>まずは自社の課題から。<wbr/>AI人材育成・導入・業務自動化について、ご相談ください。</p></div><div class="contact-right reveal"><div class="contact-topline">無料相談のご案内</div><h3>自社の課題から、相談できます</h3><p>まだAIの使いどころが決まっていなくても構いません。まずは現在の業務と、実現したいことをお聞かせください</p>
+<details><summary>料金や契約期間は、相談の段階で確認できますか？ <span aria-hidden="true">＋</span></summary><p>はい。受講する人数やご希望の内容を伺い、お見積もりと契約の条件をご案内します。</p></details><details><summary>動画教材はどのように更新されますか？ <span aria-hidden="true">＋</span></summary><p>教材は、新しいAIツールや機能に合わせて追加・更新されます。受講できる講座は、お申し込みのときにご案内します。</p></details><details><summary>AIチャットで何でも質問できますか？ <span aria-hidden="true">＋</span></summary><p>AIチャットでは、講座の内容についての基本的な質問にお答えします。自社の業務に合わせた詳しいご相談やシステムづくりは、別途ご相談ください。</p></details></div></div></section><section aria-labelledby="contact-title" class="contact section-dark" id="contact"><div class="container contact-layout"><div class="contact-left reveal"><p class="contact-kicker">まずはご相談ください</p><h2 id="contact-title"><span class="ai-v26-chunk">AIで、</span><wbr/><span class="ai-v26-chunk">その先へ</span><span></span></h2><p>まずは自社の課題から。<wbr/>AI人材育成・導入・業務自動化について、ご相談ください。</p></div><div class="contact-right reveal"><div class="contact-topline">無料相談のご案内</div><h3>自社の課題から、相談できます</h3><p>まだAIの使いどころが決まっていなくても構いません。まずは現在の業務と、実現したいことをお聞かせください</p>
 <div class="contact-list-title">無料相談で確認すること</div>
 <ul class="contact-list"><li>どの業務にAI活用の余地があるか</li><li>どの社員・部署から学び始めるか</li><li>研修と個別支援のどちらが必要か</li><li>費用と導入までの進め方</li></ul>
 <a class="contact-real-cta" href="https://hito-tsunagari.jp/ai/contact/" rel="noopener noreferrer" target="_blank">公式フォームから無料相談を申し込む <span aria-hidden="true">↗</span></a>
